@@ -42,7 +42,7 @@
         },
         data() {
             return{
-                ipInitial: "",
+                ipInitial: "000.000.000.00",
                 ipNew: "",
                 ipaddress: "",
                 city: "...",
@@ -89,7 +89,7 @@
                 this.loading = false
             })
             .catch(e => {
-                this.errors = "Something is blocking https://api.ipify.org"
+                this.errors = "Sorry, an adblocker issue occurred."
             });
         }
     };  
