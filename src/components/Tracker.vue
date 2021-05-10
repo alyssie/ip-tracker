@@ -42,7 +42,7 @@
         },
         data() {
             return{
-                ipInitial: "?",
+                ipInitial: "",
                 ipNew: "",
                 ipaddress: "",
                 city: "...",
@@ -87,6 +87,9 @@
                 this.ipInitial = response.data.ip;
                 this.track(this.ipInitial);
                 this.loading = false
+            })
+            .catch(e => {
+                this.errors = "Something is blocking https://api.ipify.org"
             });
         }
     };  
